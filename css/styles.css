@@ -101,7 +101,7 @@ img {
 .container-features {
   height: 464px;
 }
-.container-features svg {
+.container-features div {
   width: 264px;
   height: 112px;
   background-color: rgba(244, 244, 253, 1);
@@ -109,8 +109,9 @@ img {
   border-radius: 5px;
   display: block;
   margin-bottom: 8px;
-}
-.features-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container-features ul {
   gap: 24px;
