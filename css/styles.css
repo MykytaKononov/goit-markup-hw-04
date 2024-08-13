@@ -39,7 +39,7 @@ img {
 }
 .logo {
   font-size: 18px;
-  font-weight: 700px;
+  font-weight: 700;
   line-height: 21px;
   font-family: 'raleway';
   margin-right: 76px;
@@ -51,9 +51,28 @@ img {
   color: white;
 }
 .navigation {
+  margin-top: 25px;
   gap: 40px;
-  font-weight: 500px;
+  font-weight: 500;
   margin-right: 332px;
+}
+.navigation a:hover,
+.navigation a:focus {
+  color: rgba(64, 75, 191, 1);
+}
+.navigation a:hover::after,
+.navigation a:focus::after {
+  background-color: rgba(64, 75, 191, 1);
+}
+.navigation a:after {
+  display: block;
+  margin-top: 20px;
+  content: '';
+  text-align: center;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  z-index: 5;
 }
 .header-container address {
   font-style: normal;
@@ -136,7 +155,7 @@ img {
   line-height: 40px;
   text-align: center;
 }
-.container-team ul {
+.container-team ul:not(.social-links) {
   gap: 24px;
   margin-top: 72px;
 }
@@ -168,15 +187,16 @@ img {
   gap: 24px;
   justify-content: center;
 }
-.social-links svg {
+.social-links li {
   background-color: rgba(77, 90, 229, 1);
   border-radius: 100%;
   width: 40px;
   height: 40px;
 }
-.social-links use {
-  width: 16px;
-  height: 16px;
+.social-links svg {
+  width: 40px;
+  height: 40px;
+  padding: 12px;
 }
 .container-portfolio {
   height: 1240px;
@@ -191,6 +211,12 @@ img {
   margin-top: 72px;
   gap: 24px;
   flex-wrap: wrap;
+}
+.container-portfolio li:hover {
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 1px 0px rgba(46, 47, 66, 0.16);
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  cursor: pointer;
 }
 .card-content {
   border: 1px solid rgba(231, 233, 252, 1);
@@ -213,15 +239,29 @@ img {
   padding-bottom: 32px;
 }
 .container-footer {
+  display: flex;
+  flex-direction: row;
+  gap: 120px;
   height: 312px;
   background-color: rgba(46, 47, 66, 1);
 }
-.container-footer .logo {
+.container-footer {
   padding-top: 100px;
+}
+.our-socials .social-links {
+  gap: 16px;
+}
+.our-socials .social-links svg {
+  padding: 8px;
+}
+.our-socials p {
+  color: white;
+  margin-bottom: 16px;
 }
 .tagline {
   color: white;
   margin-top: 16px;
   width: 264px;
-  font-weight: 400;
+  font-weight: 300;
+  font-size: 16px;
 }
