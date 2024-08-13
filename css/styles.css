@@ -59,10 +59,12 @@ img {
 .navigation a:hover,
 .navigation a:focus {
   color: rgba(64, 75, 191, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navigation a:hover::after,
 .navigation a:focus::after {
   background-color: rgba(64, 75, 191, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navigation a:after {
   display: block;
@@ -108,7 +110,7 @@ img {
   padding-top: 188px;
   margin-bottom: 64px;
 }
-.hero-container button {
+.hero-container a button {
   width: 169px;
   height: 56px;
   background-color: rgba(77, 90, 229, 1);
@@ -116,6 +118,12 @@ img {
   border-radius: 4px;
   border: 0px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+.hero-container a button:hover,
+.hero-container a button:focus {
+  background-color: rgb(70, 82, 214);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .container-features {
   height: 464px;
@@ -193,6 +201,11 @@ img {
   width: 40px;
   height: 40px;
 }
+.social-links li:hover,
+.social-links li:hover {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: rgb(69, 81, 207);
+}
 .social-links svg {
   width: 40px;
   height: 40px;
@@ -212,6 +225,28 @@ img {
   gap: 24px;
   flex-wrap: wrap;
 }
+.container-portfolio li {
+  position: relative;
+  overflow: hidden;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  transform: translatey(100%);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: rgba(77, 90, 229, 1);
+}
+.overlay p {
+  color: white;
+  padding: 32px;
+  font-weight: 400;
+}
+.container-portfolio li:hover .overlay {
+  transform: translateY(0);
+}
 .container-portfolio li:hover {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
   box-shadow: 0px 1px 1px 0px rgba(46, 47, 66, 0.16);
@@ -222,6 +257,9 @@ img {
   border: 1px solid rgba(231, 233, 252, 1);
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 100;
+  background-color: white;
 }
 .card-content h3 {
   padding-top: 32px;
