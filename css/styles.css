@@ -160,7 +160,23 @@ img {
   line-height: 24px;
   text-align: center;
   margin-top: 8px;
+  margin-bottom: 8px;
+}
+.social-links {
   padding-bottom: 32px;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+.social-links svg {
+  background-color: rgba(77, 90, 229, 1);
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+}
+.social-links use {
+  width: 16px;
+  height: 16px;
 }
 .container-portfolio {
   height: 1240px;
