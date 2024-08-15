@@ -101,7 +101,7 @@ img {
 .menu a:focus::after {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.menu-link a:after {
+.menu a:after {
   background-color: #404bbf;
   position: absolute;
   left: 0;
