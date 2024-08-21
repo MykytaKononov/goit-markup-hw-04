@@ -389,7 +389,6 @@ img {
   gap: 16px;
 }
 .footer-social-links-container-li {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 40px;
   height: 40px;
 }
@@ -401,6 +400,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-links-container-a:hover,
 .footer-social-links-container-a:focus {
